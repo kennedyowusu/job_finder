@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:job_finder/views/home/carousel.dart';
 import 'package:job_finder/views/home/custom_search_card.dart';
+import 'package:job_finder/views/home/tag_list.dart';
 import 'package:job_finder/widgets/custom_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,8 +26,8 @@ class HomeScreen extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: Container(
-                        // color: Colors.grey.withOpacity(0.1),
-                        ),
+                      color: Colors.grey.withOpacity(0.1),
+                    ),
                   ),
                 ],
               ),
@@ -36,6 +37,8 @@ class HomeScreen extends StatelessWidget {
                   SearchCard(),
                   SizedBox(height: 5.0),
                   CarouselWithCards(),
+                  SizedBox(height: 15.0),
+                  TagList()
                 ],
               )
             ],
