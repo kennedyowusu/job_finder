@@ -30,7 +30,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 height: 3,
               ),
               CustomTextStyle(
-                text: 'Welcome Home',
+                text: 'Welcome',
                 textStyle: GoogleFonts.poppins(
                   textStyle: TextStyle(
                     fontSize: 16,
@@ -42,7 +42,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 height: 1,
               ),
               CustomTextStyle(
-                text: 'Kennedy Owusu',
+                text: 'Kennedy',
                 textStyle: GoogleFonts.poppins(
                   textStyle: TextStyle(
                     fontSize: 18,
