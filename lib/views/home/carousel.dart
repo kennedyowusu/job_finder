@@ -21,7 +21,7 @@ class CarouselWithCards extends StatelessWidget {
           height: height * 0.27,
           enlargeCenterPage: true,
           enableInfiniteScroll: true,
-          // autoPlay: true,
+          autoPlay: true,
           autoPlayInterval: Duration(seconds: 3),
           autoPlayAnimationDuration: Duration(milliseconds: 800),
           autoPlayCurve: Curves.fastOutSlowIn,
@@ -32,7 +32,7 @@ class CarouselWithCards extends StatelessWidget {
             builder: (BuildContext context) {
               return GestureDetector(
                 onTap: () {
-                  debugPrint('Card $card');
+                  debugPrint('Image Number $card');
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width,
@@ -41,115 +41,9 @@ class CarouselWithCards extends StatelessWidget {
                     color: Colors.grey[200],
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            flex: 2,
-                            child: Container(
-                              height: height * 0.14,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(10.0),
-                                  bottomRight: Radius.circular(10.0),
-                                ),
-                              ),
-                              child: Image.asset(
-                                card['image']!,
-                                height: height * 0.1,
-                                width: width * 0.1,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 3,
-                            child: Container(
-                              padding: EdgeInsets.all(10.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  CustomTextStyle(
-                                    text: card['title']!,
-                                    textStyle: GoogleFonts.poppins(
-                                      textStyle: TextStyle(
-                                        fontSize: 16,
-                                        color: primaryColor,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 5.0),
-                                  Text(
-                                    card['company'] as String,
-                                    style: TextStyle(),
-                                  ),
-                                  SizedBox(height: 5.0),
-                                  Text(
-                                    card['location']!,
-                                    style: TextStyle(),
-                                  ),
-                                  SizedBox(height: 5.0),
-                                  Text(
-                                    card['salary']!,
-                                    style: TextStyle(),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 5.0),
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10.0,
-                                horizontal: 20.0,
-                              ),
-                              decoration: BoxDecoration(
-                                color: Colors.transparent,
-                                borderRadius: BorderRadius.circular(10.0),
-                                border: Border.all(
-                                  color: Colors.grey,
-                                  width: 1.0,
-                                ),
-                              ),
-                              child: Text(
-                                'Apply',
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 10.0,
-                                horizontal: 20.0,
-                              ),
-                              decoration: BoxDecoration(
-                                color: Colors.transparent,
-                                borderRadius: BorderRadius.circular(10.0),
-                                border: Border.all(
-                                  color: Colors.grey,
-                                  width: 1.0,
-                                ),
-                              ),
-                              child: Text(
-                                'Save',
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                  child: Image.asset(
+                    card,
+                    fit: BoxFit.cover,
                   ),
                 ),
               );

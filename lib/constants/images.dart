@@ -4,3 +4,7 @@ const AIRBNBLOGO = 'assets/images/airbnb.png';
 const SPOTIFYLOGO = 'assets/images/spotify.png';
 const LINKEDINLOGO = 'assets/images/linkedIn.png';
 const METALOGO = 'assets/images/meta.png';
+const JOBONE = 'assets/images/job-1.jpg';
+const JOBTWO = 'assets/images/job-2.jpg';
+const JOBTHREE = 'assets/images/job-3.jpg';
+const JOBFOUR = 'assets/images/job-4.jpg';
