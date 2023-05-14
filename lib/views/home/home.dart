@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/constants/colors.dart';
 import 'package:job_finder/views/home/carousel.dart';
 import 'package:job_finder/views/home/custom_search_card.dart';
 import 'package:job_finder/views/home/tag_list.dart';
@@ -48,6 +49,50 @@ class HomeScreen extends StatelessWidget {
               )
             ],
           ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: secondaryColor,
+        elevation: 0,
+        onPressed: () {},
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+      ),
+      bottomNavigationBar: Theme(
+        data: ThemeData(
+          splashColor: Colors.transparent,
+          highlightColor: primaryColor,
+        ),
+        child: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          selectedItemColor: primaryColor,
+          type: BottomNavigationBarType.fixed,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home, size: 20),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.cases_outlined, size: 20),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Text(''),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.chat_outlined, size: 20),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_2_outlined, size: 20),
+              label: '',
+            )
+          ],
         ),
       ),
     );
