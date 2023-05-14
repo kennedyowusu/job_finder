@@ -23,20 +23,6 @@ class JobFinder extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       key: const Key('JobFinder'),
       title: 'Job Finder',
-      theme: ThemeData(
-        primaryColor: Color(0xFF43B1B7),
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: Color(0xFFEED408),
-        ),
-        scaffoldBackgroundColor: Colors.white,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          iconTheme: IconThemeData(
-            color: Colors.black,
-          ),
-        ),
-      ),
       home: HomeScreen(),
     );
   }
