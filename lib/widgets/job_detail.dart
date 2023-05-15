@@ -42,13 +42,16 @@ class JobDetails extends StatelessWidget {
                     Container(
                       height: 50.0,
                       width: 50.0,
-                      padding: EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
                         color: Colors.grey.withOpacity(0.1),
-                        image: DecorationImage(
-                          image: AssetImage(job.logo),
-                          fit: BoxFit.cover,
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Center(
+                        child: Image.asset(
+                          job.logo,
+                          height: 30.0,
+                          width: 30.0,
                         ),
                       ),
                     ),
@@ -146,6 +149,27 @@ class JobDetails extends StatelessWidget {
                   ),
                 )
                 .toList(),
+            SizedBox(height: 20.0),
+            SizedBox(
+              height: 45.0,
+              width: double.maxFinite,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                ),
+                child: Text(
+                  'Apply Now',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
