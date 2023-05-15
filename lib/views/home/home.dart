@@ -4,7 +4,7 @@ import 'package:job_finder/views/home/carousel.dart';
 import 'package:job_finder/views/home/custom_search_card.dart';
 import 'package:job_finder/views/home/tag_list.dart';
 import 'package:job_finder/widgets/custom_appbar.dart';
-import 'package:job_finder/widgets/job_list.dart';
+import 'package:job_finder/views/home/job_list.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
