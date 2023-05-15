@@ -6,7 +6,10 @@ class SearchCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 10,
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

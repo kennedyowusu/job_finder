@@ -11,10 +11,9 @@ class JobList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
 
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 25.0),
+      margin: EdgeInsets.symmetric(vertical: 12.0),
       height: height * 0.25,
       child: ListView.separated(
         shrinkWrap: true,
